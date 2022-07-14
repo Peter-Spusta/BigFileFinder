@@ -1,5 +1,6 @@
 package com.example.bigfilefinder;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,13 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.bigfilefinder.databinding.FragmentSecondBinding;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.PriorityQueue;
 
 public class SecondFragment extends Fragment {
 
@@ -61,8 +66,13 @@ public class SecondFragment extends Fragment {
         });
     }
 
-    public File[] findNBigestFiles(Integer n, File[] directories) {
-        
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public File[] findNBigestFiles(Integer n, HashMap<String, File> directories) {
+        PriorityQueue<HeapFile> maxHeap = new PriorityQueue<HeapFile>(
+                Collections.reverseOrder());
+
+        //todo directories -> all file to HeapFile, add them to heap, get n biggest from heap
+        directories.get("./config").length();
         return null;
     }
 
