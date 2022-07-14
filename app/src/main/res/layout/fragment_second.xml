@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <TextView
+        android:id="@+id/textview_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/button_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:text="@string/previous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+
+    <TextView
+        android:id="@+id/reqFileCntText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:text="Number of files:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/reqFileCntInput"
+        android:layout_width="85dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/reqFileCntText"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <Button
+        android:id="@+id/searchFilesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        app:layout_constraintStart_toEndOf="@+id/reqFileCntInput"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <ScrollView
+        android:layout_width="392dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reqFileCntText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
