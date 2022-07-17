@@ -8,21 +8,21 @@
 
     <Button
         android:id="@+id/addDirectoryBtn"
-        android:layout_width="60dp"
-        android:layout_height="56dp"
-        android:text="+"
-        android:textSize="24sp"
+        android:layout_width="88dp"
+        android:layout_height="43dp"
+        android:text="Find Files"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ScrollView
         android:id="@+id/browseFileView"
-        android:layout_width="403dp"
-        android:layout_height="362dp"
+        android:layout_width="404dp"
+        android:layout_height="326dp"
         android:contentDescription="@string/app_name"
         android:scrollbarStyle="insideOverlay"
         app:layout_constraintBottom_toTopOf="@+id/addDirectoryBtn"
@@ -41,8 +41,19 @@
         android:id="@+id/pathBackButton"
         android:layout_width="85dp"
         android:layout_height="46dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:text="Back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/actualPathView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/browseFileView"
+        app:layout_constraintTop_toBottomOf="@+id/pathBackButton"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="4dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
